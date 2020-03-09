@@ -4,7 +4,7 @@ import { Link } from '@reach/router';
 
 class Navigation extends React.Component {
   render() {
-    const { user } = this.props;
+    const { user, logOutUser } = this.props;
 
     return (
       <nav className="site-nav family-sans navbar navbar-expand bg-primary navbar-dark higher">
@@ -30,7 +30,7 @@ class Navigation extends React.Component {
               </Link>
             )}
             {user && (
-              <Link className="nav-item nav-link" to="/login">
+              <Link className="nav-item nav-link" to="/login" onClick={e => logOutUser(e)}>
                 log out
               </Link>
             )}

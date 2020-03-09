@@ -1,0 +1,12 @@
+Home:
+https://gist.github.com/planetoftheweb/70024557a7bb90f44a8d5dca68642f22
+
+Navigation: 
+https://gist.github.com/planetoftheweb/6c86d27d727c4fb5f689a3fe73560d5c
+
+Register:
+https://gist.github.com/planetoftheweb/b56fcf8cda51af1af61565ad56bb2898
+
+Login:
+https://gist.github.com/planetoftheweb/0a04c4e2a001d35ac345cd136540f0cf
+
