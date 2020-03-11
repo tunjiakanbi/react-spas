@@ -12,3 +12,12 @@ https://gist.github.com/planetoftheweb/0a04c4e2a001d35ac345cd136540f0cf
 
 Meetings:
 https://gist.github.com/planetoftheweb/0e4b9a1f8921d630b578e8835d7bf078
+
+CkeckIn:
+https://gist.github.com/planetoftheweb/d392ccf4365dd98a45b8b46df9ac4278
+
+Attendees:
+https://gist.github.com/planetoftheweb/af0bc7f90c9c778faaa8a8b524b4cd0d
+
+AttendeeList:
+https://gist.github.com/planetoftheweb/ddb1238c5a24b21fb8aa97e13420a2e0

@@ -23,8 +23,7 @@ class Meetings extends Component {
   }
 
   render() {
-    //const { user } = this.props;
-
+ 
     return (
       <div className="container mt-4">
         <div className="row justify-content-center">

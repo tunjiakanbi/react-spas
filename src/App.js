@@ -8,6 +8,8 @@ import Navigation from "./Navigation";
 import Login from "./Login";
 import Meetings from "./Meetings";
 import Register from "./Register";
+import CheckIn from "./CheckIn";
+import Attendees from "./Attendees";
 
 class App extends Component {
   constructor() {
@@ -29,10 +31,14 @@ class App extends Component {
           userID: FBUser.uid
         });
 
-        const meetingsRef = firebase.database().ref('meetings/' + FBUser.uid); 
+        const meetingsRef = firebase
+        .database()
+        .ref('meetings/' + FBUser.uid); 
+
         meetingsRef.on('value', snapshot => {
           let meetings = snapshot.val();
           let meetingsList = [];
+
           for(let item in meetings) {
             meetingsList.push({
               meetingID : item,
@@ -45,17 +51,10 @@ class App extends Component {
           });
         })
       } else {
-        this.setState({
-          user: null
-        });
+        this.setState({ user: null });
       }
     });
 
-    // const ref = firebase.database().ref('user');
-    // ref.on('value', snapshot => {
-    //   let FBUser = snapshot.val();
-    //   this.setState({user: FBUser});
-    // })
   }
 
   registerUser = userName => {
@@ -116,12 +115,16 @@ class App extends Component {
           addMeeting={this.addMeeting} 
           userID={this.state.userID}
           />
+          <Attendees 
+          path="/attendees/:userID/:meetingID" 
+          adminUser={this.state.userID}
+          />
+          <CheckIn 
+          path="/checkin/:userID/:meetingID" 
+         
+          />
           <Register path="/register" registerUser={this.registerUser} />
-          {/*
-      <Login path="/login" user={this.state.user} />
-          <Meetings path="/meetings" user={this.state.user} />
-          <Register path="/register" user={this.state.user} />
-      */}
+          
         </Router>
       </div>
     );
